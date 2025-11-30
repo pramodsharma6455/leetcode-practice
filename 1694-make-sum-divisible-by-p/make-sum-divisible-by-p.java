@@ -4,7 +4,8 @@ class Solution {
         int[] pre = new int[n];
         
         pre[0] = nums[0] % p;
-        for(int i = 1; i < n; i++) pre[i] = (nums[i] % p + pre[i - 1]) % p;
+        for(int i = 1; i < n; i++)
+         pre[i] = (nums[i] % p + pre[i - 1]) % p;
 
         int need = pre[n - 1];
         if(need == 0) return 0;
